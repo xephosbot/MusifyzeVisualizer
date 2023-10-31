@@ -1,6 +1,6 @@
 # MusifyzeVisualizer
 
-![Preview](^img/preview.gif^)
+![Preview](img/preview.gif)
 
 ## Description
 
