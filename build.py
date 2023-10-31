@@ -28,6 +28,10 @@ if __name__ == '__main__':
 	archive_path = sys.argv[1]
 	gitignore_path = os.path.join(project_path, '.gitignore')
 	ignore_patterns = read_gitignore(gitignore_path)
+
+	if os.path.exists(archive_path):
+		os.remove(archive_path)
+
 	zipf = zipfile.ZipFile(archive_path, 'w', zipfile.ZIP_DEFLATED)
 	zipdir(project_path, zipf, ignore_patterns)
 	zipf.close()
