@@ -28,6 +28,7 @@ if __name__ == '__main__':
 	archive_path = sys.argv[1]
 	gitignore_path = os.path.join(project_path, '.gitignore')
 	ignore_patterns = read_gitignore(gitignore_path)
+	ignore_patterns.append('img')
 
 	if os.path.exists(archive_path):
 		os.remove(archive_path)
